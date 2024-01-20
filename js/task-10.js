@@ -6,6 +6,7 @@ const boxesContainer = document.querySelector("#boxes");
 createButton.addEventListener("click", () => {
   const amount = +document.querySelector("input").value;
   createBoxes(amount);
+  document.querySelector("input").value = "";
 });
 
 destroyButton.addEventListener("click", destroyBoxes);

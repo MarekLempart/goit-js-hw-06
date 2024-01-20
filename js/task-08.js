@@ -3,15 +3,45 @@ loginForm.addEventListener("submit", loginSubmit);
 
 function loginSubmit(event) {
   event.preventDefault();
+
   const loginForm = event.target;
   const email = loginForm.elements.email.value;
   const password = loginForm.elements.password.value;
+
   if (email === "" || password === "") {
-    return console.log("Please fill in all the fields!");
+    const message = "Please fill in all the fields!";
+    alert(message);
+    return
   }
-  console.log(`Email: ${email}, Password: ${password}`);
+
+  const formData = {
+    email: email,
+    password: password
+  };
+
+  console.log("Form data:", formData);
   loginForm.reset();
 }
+
+
+// const loginForm = document.querySelector(".login-form");
+// loginForm.addEventListener("submit", loginSubmit);
+
+// function loginSubmit(event) {
+//   event.preventDefault();
+
+//   const loginForm = event.target;
+//   const email = loginForm.elements.email.value;
+//   const password = loginForm.elements.password.value;
+//   if (email === "" || password === "") {
+//     const message = "Please fill in all the fields!";
+//     alert(message);    
+//   }
+
+//   console.log(`Email: ${email}, Password: ${password}`);
+//   loginForm.reset();
+// }
+
 
 // const loginForm = document.querySelector(".login-form");
 
@@ -27,3 +57,20 @@ function loginSubmit(event) {
 //   console.log(formObject);
 //   loginForm.reset();
 // });
+
+
+
+// const loginForm = document.querySelector(".login-form");
+// loginForm.addEventListener("submit", loginSubmit);
+
+// function loginSubmit(event) {
+//   event.preventDefault();
+//   const loginForm = event.target;
+//   const email = loginForm.elements.email.value;
+//   const password = loginForm.elements.password.value;
+//   if (email === "" || password === "") {
+//     return console.log("Please fill in all the fields!");
+//   }
+//   console.log(`Email: ${email}, Password: ${password}`);
+//   loginForm.reset();
+// }

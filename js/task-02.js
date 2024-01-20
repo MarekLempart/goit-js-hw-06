@@ -8,9 +8,18 @@ const ingredients = [
   "Condiments",
 ];
 
-ingredients.forEach((ingredients) => {
+const liItems = ingredients.map((ingredients) => {
   const li = document.createElement("li");
   li.textContent = ingredients;
   li.classList.add("item");
-  ingredientsList.appendChild(li);
-});
+  return li;  
+  });
+
+  ingredientsList.append(...liItems);
+
+// ingredients.forEach((ingredients) => {
+//   const li = document.createElement("li");
+//   li.textContent = ingredients;
+//   li.classList.add("item");
+//   ingredientsList.appendChild(li);
+// });
